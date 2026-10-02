@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bilibili Render Obsidian"
+  short_description: "Turn a Bilibili lecture into a structured Obsidian note with key frames and clickable timestamps."
+  default_prompt: "Use this skill to turn a Bilibili video into a high-quality Chinese Obsidian note with clear pedagogical motivation and logic: logged-in ai-zh subtitles first, the original video's subtitles for re-uploads, and speech-to-text via a user-configured STT MCP only after asking the user (never installing Whisper), two-pass frame recall with frames inspected visually rather than by OCR, unobstructed fully revealed frames with visible captions and clickable time ranges, callouts instead of LaTeX boxes, a final synthesis section, and publishing into the vault inbox through the Obsidian CLI with on-disk verification."

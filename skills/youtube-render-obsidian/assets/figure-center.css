@@ -1,0 +1,23 @@
+/* 图片与紧随其后的图注居中。仅作用于 frontmatter 含 cssclasses: figure-center 的笔记 */
+
+/* 阅读视图：图片和图注在同一段落里 */
+.figure-center.markdown-rendered p:has(> .image-embed),
+.figure-center .markdown-rendered p:has(> .image-embed) {
+  text-align: center;
+  text-indent: 0; /* 抵消 heading indent 的首行缩进 */
+}
+
+/* 实时预览：图片所在行与下一行（图注） */
+.figure-center .cm-line:has(.image-embed),
+.figure-center .cm-line:has(.image-embed) + .cm-line {
+  text-align: center;
+  text-indent: 0; /* 抵消 heading indent 的首行缩进 */
+}
+
+/* 两种视图下图片本身居中（主题会把 .image-embed 设为定宽块元素，需一起居中） */
+.figure-center .image-embed,
+.figure-center .image-embed img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
